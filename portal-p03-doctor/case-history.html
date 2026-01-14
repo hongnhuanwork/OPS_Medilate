@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Ca Bệnh - Portal Bác Sĩ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/main.js" defer></script>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col">
+            <div class="p-6 border-b border-gray-200">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-gray-900">Medilate OPS</h1>
+                        <p class="text-xs text-gray-500">Portal Bác Sĩ</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+                <a href="my-schedule.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>Lịch Làm Việc</span>
+                </a>
+                <a href="medical-case.html" class="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span>Ca Bệnh</span>
+                </a>
+                <a href="case-history.html" class="flex items-center space-x-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Lịch Sử Ca Bệnh</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-gray-200">
+                <div class="flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+                    <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-gray-900">Bác Sĩ</p>
+                        <p class="text-xs text-gray-500">doctor@medilate.com</p>
+                    </div>
+                </div>
+                <a href="../auth/login.html" class="block mt-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition">Đăng Xuất</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <header class="bg-white border-b border-gray-200 px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Lịch Sử Ca Bệnh</h2>
+                        <p class="text-sm text-gray-500 mt-1">Xem lại lịch sử các ca bệnh đã xử lý</p>
+                    </div>
+                    <div class="flex space-x-3">
+                        <input type="date" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                        <input type="text" placeholder="Tìm kiếm bệnh nhân..." class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-6">
+                <!-- Case History List -->
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-3">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <span class="text-sm font-medium text-blue-600">NV</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-900">Nguyễn Văn A</h4>
+                                        <p class="text-sm text-gray-500">P-2024-001 • Nam, 34 tuổi</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mb-3">
+                                    <div>
+                                        <p class="text-xs text-gray-500">Ngày khám</p>
+                                        <p class="text-sm font-medium text-gray-900">10/12/2024</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-500">Chẩn đoán</p>
+                                        <p class="text-sm font-medium text-gray-900">Viêm nướu</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600">Điều trị: Vệ sinh răng miệng, kê đơn thuốc kháng viêm</p>
+                            </div>
+                            <a href="medical-case.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium">
+                                Xem Chi Tiết
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-3">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                        <span class="text-sm font-medium text-purple-600">TT</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-900">Trần Thị B</h4>
+                                        <p class="text-sm text-gray-500">P-2024-002 • Nữ, 28 tuổi</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mb-3">
+                                    <div>
+                                        <p class="text-xs text-gray-500">Ngày khám</p>
+                                        <p class="text-sm font-medium text-gray-900">08/12/2024</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-500">Chẩn đoán</p>
+                                        <p class="text-sm font-medium text-gray-900">Sâu răng</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600">Điều trị: Trám răng, hẹn tái khám sau 1 tuần</p>
+                            </div>
+                            <a href="medical-case.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium">
+                                Xem Chi Tiết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
