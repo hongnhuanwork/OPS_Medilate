@@ -1,3 +1,4 @@
+//assets\js\main.js
 // Main JavaScript for UI interactions
 document.addEventListener('DOMContentLoaded', function() {
     // Sidebar toggle
